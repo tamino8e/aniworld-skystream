@@ -1,0 +1,34 @@
+{
+  "packageName": "to.aniworld.plugin",
+  "name": "AniWorld",
+  "description": "AniWorld.to – deutsche Anime-Streams (GerDub / GerSub / EngSub)",
+  "author": "DEINNAME",
+  "version": "1.1.0",
+  "baseUrl": "https://aniworld.to",
+  "domains": [
+    { "name": "aniworld.to",   "url": "https://aniworld.to" },
+    { "name": "aniworld.sx",   "url": "https://aniworld.sx" },
+    { "name": "aniworld.info", "url": "https://aniworld.info" }
+  ],
+  "settings": [
+    {
+      "key": "language",
+      "name": "Sprache",
+      "description": "Welche Tonspur bevorzugt werden soll",
+      "type": "select",
+      "default": "dub",
+      "options": [
+        { "label": "GerDub (bevorzugt, Sub als Fallback)", "value": "dub" },
+        { "label": "GerSub (bevorzugt)", "value": "sub" },
+        { "label": "Alle Sprachen anzeigen", "value": "both" }
+      ]
+    },
+    { "key": "onlyDub", "name": "Nur GerDub", "description": "Sub- und EngSub-Quellen komplett ausblenden", "type": "boolean", "default": false },
+    { "key": "hosterBlacklist", "name": "Hoster-Blacklist", "description": "Komma-getrennt, z. B. doodstream,vidmoly", "type": "text", "default": "" },
+    { "key": "hosterPriority", "name": "Hoster-Priorität", "description": "Komma-getrennt, Reihenfolge der Quellen", "type": "text", "default": "voe,filemoon,vidmoly,doodstream,streamtape,vidoza" },
+    { "key": "maxHosters", "name": "Max. Quellen pro Episode", "type": "number", "default": 10 },
+    { "key": "includeSpecials", "name": "Specials & OVAs", "description": "Staffel 0 einblenden", "type": "boolean", "default": true },
+    { "key": "includeMovies", "name": "Filme einblenden", "type": "boolean", "default": true },
+    { "key": "homeRows", "name": "Genre-Reihen im Dashboard", "type": "number", "default": 4 }
+  ]
+}
